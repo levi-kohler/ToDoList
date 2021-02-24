@@ -49,13 +49,14 @@ namespace Program
       public static void View()
       {
         List<Item> result = Item.GetAll();
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("\n" + "To Do List:");
         for (int i = 0; i < result.Count; i++)
         {
           Console.WriteLine(result[i].Description.ToString());
         }
+        Console.ForegroundColor = ConsoleColor.White;
         menu();
       }
-
   }
 }
